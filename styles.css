@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 1 rem = 16 px but.. */
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color:#fff; 
+    padding: 1rem;  
+}
+
+nav, footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    list-style: none;
+}
+
+nav ul, footer ul{
+    display: flex;
+    gap: 2rem;
+}
+nav ul li, footer ul li{
+    font-size: 1.8rem;
+}
+
+nav ul li:hover, footer ul li:hover{
+    border-bottom: rgb(238, 238, 154) 2px solid;
+}
+
+
+/* Top Section */
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.topSecimage {
+    width: 50%;
+}
+
+#Work-img{
+
+    height: 400px;
+    border-radius: 5rem;
+}
+#topSec {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 3rem;
+   
+}
+
+#topSec h1 {
+    font-size: 6rem;
+    line-height: 1.2;
+    margin: 7rem 0;
+}
+
+#topSec h4 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 200;
+}
+
+
+
+/* Card Section */
+
+.card, .girdCard{
+    display: flex;
+    margin: 2rem 1rem;
+    box-shadow: 0px 5px 4px rgba(104, 98, 98, 0.842) ;
+    align-items: center;
+    border: 1px solid #e2e2e2;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.card-img {
+    height: 200px;
+}
+
+.card-content {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+}
+
+.read-btn {
+    all: unset;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+}
+.read-btn:hover {
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* Grid section */
+
+
+.girdCard {
+    flex-direction: column-reverse;
+    max-width: 300px;
+    border-radius: 0.5rem;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   
+}
+
+.gridWrapper {
+    margin: 0 auto;
+}
+
+
+/* footer */
+
+footer {
+    margin: 2rem;
+}
+
+
+
+/* post page */
+
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.bannerImage img {
+    height: 50%;
+    width: 50%;
+    margin: 0 25%;
+
+}
+.post h1 {
+    font-size: 3rem;
+    padding: 2rem 0;
+}
+.post hr{
+    margin: 3rem 0;
+}
+.aboutauthor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+
+
+
+
+
+/* media queries */
+@media only screen and (max-width: 1000px) {
+    .topSecContent, .topSecimage {
+        font-size: 4rem;
+    }
+
+    #Work-img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    #topSec h1 {
+        font-size: 4rem;
+        margin: 4rem 0;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    #topSec {
+        display: flex;
+    flex-direction: column-reverse;   
+    }
+    .topSecimage {
+        width: 100%;
+    }
+    #Work-img {
+        border-radius: 0;
+    }
+
+    .card img {
+        width: 60%;
+       object-fit: scale-down;
+    }
+}
+
+
